@@ -19,6 +19,7 @@ class ConfigSpider(scrapy.Spider):
         yield scrapy.Request(url='http://news.163.com/special/0001386F/rank_news.html??metal', callback=self.parse_list)
 
     def parse_list(self, response):
+        print('kkkkkkkk')
         prev_item = response.meta.get('item')
         for elem in response.css('table tr:not(:first-child)'):
             item = Item()
