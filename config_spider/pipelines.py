@@ -22,7 +22,7 @@ task_id = os.environ.get('CRAWLAB_TASK_ID')
 class ConfigSpiderPipeline(object):
     def process_item(self, item, spider):
         item['task_id'] = task_id
-        print('mmmmmmm333333m')
+        print('mmmm33333mmm333333m')
         if col is not None:
             col.save(item)
         return item
